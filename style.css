@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto:wght@400;900&display=swap");
+
+/* font-family: 'Akaya Telivigala', cursive;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4c4177;
+  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+}
+
+form button {
+  background: #4c4177;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #4c4177;
+  color: #fff;
+  color: #4c4177;
+  background: #fff;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.done-button,
+.delete-button {
+  background: #f03f3f;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.done-button {
+  background: #36f13f;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.db {
+  transform: translateY(10rem) rotateZ(30deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #101010;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select {
+
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #4c4177;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: 0.3s linear;
+}
+
+.select:hover::after {
+  background: white;
+  color: #4c4177;
+}
+
+
+@media screen and (max-width:768px) {
+  form {
+    width: 100%;
+  }
+
+  .select {
+    margin: 5px;
+  }
+
+
+
+  .todo-input {
+    margin-left: 20px;
+    width: 70%;
+  }
+}
